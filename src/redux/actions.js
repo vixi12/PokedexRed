@@ -1,4 +1,4 @@
-import * as actions from './actiontypes'
+import * as actions from "./actiontypes";
 
 // export function fetchPokemons(pokearray) {
 //     return {
@@ -9,9 +9,11 @@ import * as actions from './actiontypes'
 //     }
 // }
 
-export const fetchPokemons = pokearray => ({
-    type: actions.FETCH,
-    payload:{
-        array : pokearray,
-    }
-})
+
+
+export const fetchPokemons = (pokearray) => ({
+  type: actions.FETCH,
+  payload: {
+    array: pokearray,
+  },
+});
