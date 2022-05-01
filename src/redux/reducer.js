@@ -1,10 +1,13 @@
-import * as actions from './actiontypes';
- 
- export default function reducer(state = [], action){
-    if (action.type === actions.FETCH)
-    return [
-        ...state, {
-            arrays: action.payload.array,
-        }
-    ];
+import * as actions from "./actiontypes";
+
+export default function reducer(state = [], action) {
+  switch (action.type) {
+    case actions.FETCH:
+      return {
+        ...state,
+        pokemonList: action.payload,
+      };
+    default:
+      return state;
+  }
 }
